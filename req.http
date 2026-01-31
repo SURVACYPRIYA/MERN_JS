@@ -1,0 +1,65 @@
+### read all users
+GET http://localhost:4000/user-api/users
+
+
+### read user by ObjectID
+GET http://localhost:4000/user-api/users/697dc7764aa8390983910aa0
+
+### create users
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"priya",
+    "password":"gamya",
+    "age":20
+}
+
+
+### update users
+PUT http://localhost:4000/user-api/users/697dc7764aa8390983910aa0
+Content-Type: application/json
+
+{
+    "username":"priya",
+    "password":"gamya",
+    "age":15
+}
+
+
+
+### delete  user by ObjectID
+DELETE http://localhost:4000/user-api/users/697dc7764aa8390983910aa0
+
+
+
+
+
+
+### read all products
+GET http://localhost:4000/product-api/products
+
+### read product by ObjectID
+GET http://localhost:4000/product-api/products/697dd31a3fe54a7de3dd6c74
+
+
+### create product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "pid":"100",
+    "productName":"samsung",
+    "price":100000
+}
+
+
+### update product by ObjectID
+PUT http://localhost:4000/product-api/products/697dd31a3fe54a7de3dd6c74
+Content-Type: application/json
+
+{
+    "pid":"100",
+    "productName":"iphone",
+    "price":100000
+}
