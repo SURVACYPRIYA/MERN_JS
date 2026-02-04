@@ -3,7 +3,7 @@ GET http://localhost:4000/user-api/users
 
 
 ### read user by ObjectID
-GET http://localhost:4000/user-api/users/697dc7764aa8390983910aa0
+GET http://localhost:4000/user-api/users/69809b9173188e63f3b420aa
 
 ### create users
 POST http://localhost:4000/user-api/users
@@ -17,30 +17,45 @@ Content-Type: application/json
 
 
 ### update users
-PUT http://localhost:4000/user-api/users/697dc7764aa8390983910aa0
+PUT http://localhost:4000/user-api/users/69809b9173188e63f3b420aa
 Content-Type: application/json
 
 {
     "username":"priya",
     "password":"gamya",
-    "age":15
+    "age":15    
 }
 
 
 
 ### delete  user by ObjectID
-DELETE http://localhost:4000/user-api/users/697dc7764aa8390983910aa0
+DELETE http://localhost:4000/user-api/users/69809b9173188e63f3b420aa
+
+
+### user authentication(Login) req
+POST  http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "username":"priya",
+    "password":"gamya"
+}
+
+
+### req for protected route
+GET http://localhost:4000/user-api/test
 
 
 
 
 
+#############################
 
 ### read all products
 GET http://localhost:4000/product-api/products
 
 ### read product by ObjectID
-GET http://localhost:4000/product-api/products/697dd31a3fe54a7de3dd6c74
+GET http://localhost:4000/product-api/products/69809b5373188e63f3b420a3
 
 
 ### create product
@@ -55,7 +70,7 @@ Content-Type: application/json
 
 
 ### update product by ObjectID
-PUT http://localhost:4000/product-api/products/697dd31a3fe54a7de3dd6c74
+PUT http://localhost:4000/product-api/products/69809b5373188e63f3b420a3
 Content-Type: application/json
 
 {
@@ -63,3 +78,5 @@ Content-Type: application/json
     "productName":"iphone",
     "price":100000
 }
+
+

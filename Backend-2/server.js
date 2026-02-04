@@ -1,7 +1,9 @@
 import exp from 'express'
 import {userApp} from './APIs/UserAPI.js'
-import { connect } from 'mongoose'
 import { productApp } from './APIs/ProductAPI.js';
+import { connect } from 'mongoose'
+import cookieParser from 'cookie-parser';
+
 //create server
 const app=exp();
  const port=4000;
@@ -23,6 +25,8 @@ connectDB()
 
 //body patser middleware
 app.use(exp.json())
+//add cookieParser middleware
+app.use(cookieParser())
 //if path starts with /user-api/, forward req to userApp
 app.use('/user-api',userApp)
 app.use('/product-api',productApp)
